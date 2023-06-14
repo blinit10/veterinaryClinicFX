@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Pos?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="controllers.MainController" stylesheets="@styles.css">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <VBox styleClass="card">
+        <Label text="Servicios" styleClass="card-title"/>
+        <HBox fx:id="servicesCard" styleClass="card-content">
+            <!-- Add content for Services card here -->
+        </HBox>
+        <HBox styleClass="controls" alignment="CENTER" spacing="10">
+            <Button text="➕ Operación" onAction="#onAddOperationButtonClick"/>
+            <Button text="➕ Tratamiento" onAction="#onAddTreatmentButtonClick"/>
+            <Button text="➕ Vacunación" onAction="#onAddVaccinationButtonClick"/>
+            <Button text="✏" onAction="#onUpdateServiceButtonClick"/>
+            <Button text="🗑" onAction="#onDeleteServiceButtonClick"/>
+            <Button text="Determinar Costo (Inciso b)" onAction="#onDetermineCostButtonClick"/>
+            <Button text="Operación más larga (Inciso e)" onAction="#onDetermineLongestOperationButtonClick"/>
+            <Button text="Determinar Animales Vacunados este mes (Inciso f)" onAction="#onDVaccinatedAnimalsButtonClick"/>
+        </HBox>
+    </VBox>
+
+    <VBox  styleClass="card">
+        <Label text="Animales" styleClass="card-title"/>
+        <HBox fx:id="animalsCard" styleClass="card-content">
+            <!-- Add content for Animals card here -->
+        </HBox>
+        <HBox styleClass="controls" alignment="CENTER" spacing="10">
+            <Button text="➕" onAction="#onAddAnimalButtonClick"/>
+            <Button text="✏" onAction="#onUpdateAnimalButtonClick"/>
+            <Button text="🗑" onAction="#onDeleteAnimalButtonClick"/>
+            <Button text="Determinar Canitdad de Animales (Inciso c)" onAction="#onDetermineAmountOfAnimalsGivenOwnerButtonClick"/>
+            <Button text="Determinar Especie más Frecuente (Inciso d)" onAction="#onDetermineMostFrecuentSpeciesButtonClick"/>
+            
+
+        </HBox>
+    </VBox>
+
+    <VBox styleClass="card">
+        <Label text="Veterinarios" styleClass="card-title"/>
+        <HBox fx:id="veterinariansCard" styleClass="card-content">
+            <!-- Add content for Veterinarians card here -->
+        </HBox>
+        <HBox  styleClass="controls" alignment="CENTER" spacing="10">
+            <Button text="➕" onAction="#onAddVeterinarianButtonClick"/>
+            <Button text="✏" onAction="#onUpdateVeterinarianButtonClick"/>
+            <Button text="🗑" onAction="#onDeleteVeterinarianButtonClick"/>
+        </HBox>
+        <HBox styleClass="controls" alignment="CENTER" spacing="10">
+        </HBox>
+    </VBox>
+</VBox>
