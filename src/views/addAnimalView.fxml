@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CheckBox?>
+
+<GridPane xmlns:fx="http://javafx.com/fxml" fx:controller="controllers.AddAnimalController"
+          alignment="CENTER" hgap="10" vgap="10">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+
+    <Label text="Nombre:" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+    <TextField fx:id="nameField" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+    <Label text="Especie:" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+    <TextField fx:id="speciesField" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+    
+    <Label text="Raza:" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+    <TextField fx:id="breedField" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+    
+        <Label text="Sexo:" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+    <ComboBox fx:id="sexField" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+    <Label text="Tiene Chip:" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+    <CheckBox fx:id="hasChipField" GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+    <Label text="Dueño:" GridPane.columnIndex="0" GridPane.rowIndex="5"/>
+    <ComboBox fx:id="ownerField" GridPane.columnIndex="1" GridPane.rowIndex="5"/>
+    
+    <!-- Add more form fields here -->
+
+    <HBox alignment="CENTER_RIGHT" spacing="10" GridPane.columnIndex="1" GridPane.rowIndex="6">
+        <Button text="Cancel" onAction="#onCancelButtonClick"/>
+        <Button text="Save" onAction="#onSaveButtonClick"/>
+    </HBox>
+</GridPane>
